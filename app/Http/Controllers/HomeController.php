@@ -9,6 +9,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Video;
 
 /**
  * Class HomeController
@@ -33,6 +34,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('adminlte::home');
+        $videos= Video::orderBy('id','desc')->paginate(5);
+        return view('adminlte::home', array(
+            'videos'=>$videos
+        ));
     }
 }

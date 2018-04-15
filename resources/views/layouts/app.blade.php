@@ -16,6 +16,7 @@
         <!-- CSS personalizado del proyecto  -->
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/sbadmin/vendor/bootstrap/css/csscustompry.css') }}">
 
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([

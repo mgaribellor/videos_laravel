@@ -11,6 +11,31 @@
   used under CC BY http://creativecommons.org/licenses/by/4.0/
   Modified icons to fit ionicon’s grid from original.
 */
+
+#video-list .panel-body{
+  padding-left: 0px;
+}
+
+.video-image-mask{
+  width: 185px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.video-image-mask .video-image{
+  width: 105%;
+}
+
+.video-title{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.video-title a{
+
+  color: #444;
+}
+
 @font-face {
   font-family: "Ionicons";
   src: url("../fonts/ionicons.eot?v=3.0.0-alpha.3");

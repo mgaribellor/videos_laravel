@@ -31,6 +31,14 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 
+Route::get('/Home', array(
+		'as'=>'Home',
+		'middleware'=>'auth',
+		'uses'=>'HomeController@index'	
+));
+
+
+
 //Rutas de controlador de video
 Route::get('/Crear-video', array(
 		'as'=>'createVideo',
@@ -43,4 +51,10 @@ Route::post('/guardar-video', array(
 		'as'=>'saveVideo',
 		'middleware'=>'auth',
 		'uses'=>'VideoController@saveVideo'	
+));
+
+
+Route::get('/miniatura/{filename}',array(
+		'as'=>'imageVideo',
+		'uses' => 'VideoController@getImage'	
 ));
